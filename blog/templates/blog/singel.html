@@ -1,0 +1,32 @@
+ {% extends "blog/home.html" %} 
+
+ {% block singel %}
+    
+        <section class="categories-area section-padding3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-70">
+                            <h2>What Services you will Get from me!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                            <div class="cat-icon"><img src= "{{ article.thumbnail.url}}"  width="500" height="400">
+                            </div>
+                            <br><br>
+                            <div class="cat-cap">
+                            <a  href="{% url 'blog:detail' article.slug %}"></a>
+                    </div> 
+                         <h3> 
+                        <p>This is a paragraph.</p>
+                        <p>{{ article.describtion }}</p>  
+                        </h3>
+                        </div>
+                 </tr>
+            </div>
+        </section>
+ {% endblock singel %}
+
+
