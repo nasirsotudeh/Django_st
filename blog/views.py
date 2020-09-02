@@ -8,7 +8,8 @@ from .models import Article , Category
 def home(request):
 
     context = {
-        'articles' : Article.objects.filter(),
+        'articles': Article.objects.filter(),
+        'category' : Category.objects.filter(),
     }
     return render(request ,'blog/main.html', context)
 ########################

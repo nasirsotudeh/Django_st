@@ -28,75 +28,26 @@
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
-        <div class="header-area">
-                <div class="main-header  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
-                                <div class="logo">
-                                    <a href="index.html"><img src="/static/blog/assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10 col-md-10">
-                                <div class="menu-main d-flex align-items-center justify-content-end">
-                                    <!-- Main-menu -->
-                                    <div class="main-menu f-right d-none d-lg-block">
-                                        <nav> 
-                                            <ul id="navigation">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="portfolio.html">Portfolio</a></li>
-                                                <li><a href="#">Page</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
-                                                        <li><a href="portfolio_details.html">Portfolio Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="header-right-btn f-right d-none d-xl-block ml-20">
-                                        <a href="#" class="btn header-btn">Get Free Consultent</a>
-                                    </div>
-                                </div>
-                            </div>   
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <!-- Header End -->
+{% block navbar %}
+
+{% endblock navbar %}
     </header>
+
             {% block singel %}
-            
             {% endblock singel %}
             
 
             {% block main %}
-            
             {% endblock main %}
 
 
 
             {% block main1 %}
-
-            {% endblock %}
-    <main>
-               
+            {% endblock %} 
             </div>
         </div>
-      
-        <!-- Services Area End -->
-        <!-- Want To Work Start -->
-        <!-- client-comments -->
+ 
+
         <section class="client-comments section-paddingt30">
             <div class="container">
                 <div class="row">
@@ -138,30 +89,6 @@
             </div>           
             <!-- End latest-blog-area -->
         </section>
-               <!-- Contact Info Start -->
-        <section class="contact-info-area w-padding2" data-background="assets/img/gallery/section_bg04.jpg">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-5 col-lg-7">
-                      <div class="contact-caption mb-50">
-                            <h3>If Not Now, When? Let’s Work Together!</h3>
-                            <p>Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra.</p>
-                            <img src="assets/img/gallery/sin.png" alt="">
-                      </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5">
-                        <form action="#" class="contact-wrapper">
-                            <input type="text" name="name" placeholder="Full Name">
-                            <input type="email" name="email" placeholder="Email Address">
-                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                            <button class="submit-btn2" type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Info End -->
-
     </main>
     <footer>
         <!-- Footer Start-->
