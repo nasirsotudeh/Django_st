@@ -4,7 +4,7 @@ from .models import Article , Category
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title' , 'status' , 'slug' , 'position')
     list_filter =(['status'])
-    search_fields = ('title' , 'description')
+    search_fields = ('title' , 'description', 'slug')
 
 
 admin.site.register(Category , CategoryAdmin)

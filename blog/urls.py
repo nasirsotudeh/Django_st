@@ -7,7 +7,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from . import views 
-from .models import Category
+
 
 app_name = "blog"
 

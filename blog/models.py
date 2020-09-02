@@ -2,24 +2,19 @@ from django.db import models
 from django.utils import timezone
 
 
-
-
-
-
 # my manager for manage filter
 class ArticleManager(models.Model):
     def published(self):
             return self.filter(status = 'p')
 
+# category
 class Category(models.Model):
     title = models.CharField(max_length=200 , verbose_name="Category")
-    slug = models.SlugField(max_length=100 , unique=True, verbose_name="TitleSlug")
+    slug = models.SlugField(max_length=100 , unique=True, verbose_name="slug")
     status = models.BooleanField(default = True , verbose_name ="show?")
     position = models.IntegerField(verbose_name="position")
 
     class Meta:
-        verbose_name = "Categorys"
-        verbose_name_plural = "titles"
         ordering = ['position']
 
     def __str__(self):
@@ -27,13 +22,12 @@ class Category(models.Model):
 
     
 
-
+# Article
 class Article(models.Model):
-
     title = models.CharField(max_length = 250)
     slug = models.SlugField(max_length = 100 , unique = True)
     describtion = models.TextField()
-    Category = models.ManyToManyField(Category , verbose_name = 'categorys')
+    category = models.ManyToManyField(Category , verbose_name = 'categorys', related_name="articles")
     thumbnail = models.ImageField(upload_to='media')
     publish = models.DateTimeField(default=timezone.now)
     craeted = models.DateTimeField(auto_now_add= True)
