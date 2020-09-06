@@ -1,0 +1,29 @@
+      <section class="services-area  services-padding">
+            <div class="container">
+               <div class="project-heading mb-35">
+                    <div class="row align-items-end">
+                        <div class="col-lg-6">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle">
+                                <h2>category!</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="properties__button">
+                                <!--Nav Button  -->                                            
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    {% for cat in category.articles.published%}
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="{% url 'blog:category' cat.slug %}" role="tab" aria-controls="nav-home" aria-selected="false">{{cat.slug}}</a>
+                                        {% endfor %}
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+        </section>
+        </div>
+        <!-- About Area End -->
+        <!-- Categories Area Start -->
+        </section>

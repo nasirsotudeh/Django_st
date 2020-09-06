@@ -1,5 +1,6 @@
 
 {% load base_tags %}
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
@@ -31,17 +32,18 @@
     <header>
   {% nav_category %}
 
-    </header>
+    </header>   
+  
 
             {% block singel %}
             {% endblock singel %}
             
 
+           
             {% block main %}
             {% endblock main %}
 
-
-
+            {% main_category %}
             {% block main1 %}
             {% endblock %} 
             </div>

@@ -3,9 +3,9 @@ from django.utils import timezone
 
 
 # my manager for manage filter
-class ArticleManager(models.Model):
+class ArticleManager(models.Manager):
     def published(self):
-            return self.filter(status = 'p')
+        return self.filter(status ='p')
 
 # category
 class Category(models.Model):
@@ -42,6 +42,15 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def category_published(self):
+        return self.category.filter(status=True)
+
+    objects = ArticleManager()
+
+
+
+
     # class Meta :
              
     #     ordering = ['published']
