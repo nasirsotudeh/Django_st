@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Article , Category
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('title' , 'status' , 'slug' , 'position')
+    list_display = ('title' , 'status' , 'parent','slug' , 'position')
     list_filter =(['status'])
     search_fields = ('title' , 'description', 'slug')
 

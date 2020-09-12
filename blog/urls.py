@@ -10,7 +10,6 @@ from . import views
 
 
 app_name = "blog"
-
 urlpatterns = [
     
     path('', views.home),

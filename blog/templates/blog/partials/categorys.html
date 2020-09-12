@@ -5,7 +5,7 @@
                         <div class="col-lg-6">
                             <!-- Section Tittle -->
                             <div class="section-tittle">
-                                <h2>category!</h2>
+                                <h2>categorys!</h2>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -13,7 +13,7 @@
                                 <!--Nav Button  -->                                            
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    {% for cat in category.articles.published%}
+                                    {% for cat in category %}
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="{% url 'blog:category' cat.slug %}" role="tab" aria-controls="nav-home" aria-selected="false">{{cat.slug}}</a>
                                         {% endfor %}
                                     </div>
