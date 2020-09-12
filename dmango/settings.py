@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'dashboard',
     'weather',
     'blog',
+    'reset_migrations',
 ]
 
 MIDDLEWARE = [
