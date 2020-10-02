@@ -2,10 +2,15 @@ from django.db import models
 from django.utils import timezone
 
 
+
 # my manager for manage filter
 class ArticleManager(models.Manager):
     def published(self):
-        return self.filter(status ='p')
+        return self.filter(status='p')
+        
+class CategoryManager(models.Manager):
+    def active(self):
+        return self.filter(status=True)
 
 # category
 class Category(models.Model):
@@ -20,9 +25,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
-
-    
-
+    objects = CategoryManager()
 # Article
 class Article(models.Model):
     title = models.CharField(max_length = 250)
@@ -48,6 +51,7 @@ class Article(models.Model):
         return self.category.filter(status=True)
 
     objects = ArticleManager()
+  
 
 
 
