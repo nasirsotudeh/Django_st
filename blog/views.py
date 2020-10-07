@@ -3,13 +3,6 @@ from .models import Article, Category
 from django.core.paginator import Paginator
 from django.views.generic import ListView , DetailView
 
-
-
-
-
-
-
-
 class Articlelist(ListView):
     # use class view 
     # models = Article

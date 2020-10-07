@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'weather',
     'blog',
     'reset_migrations',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,13 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/Media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'Media')
+
+# REST_FRAMEWORK
+REST_FRAMEWORK = {
+     'DEFAULT_ATHENTICATION_CLASSES': (
+         'rest_framework.authentication.SessionAuthentiacation',
+     ),
+     'DEFALT_PERMISSION_CLASS': (
+         'rest_framework.permission.IsAuthenticatedOrReadOnly'
+     )
+ }
