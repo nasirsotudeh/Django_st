@@ -1,6 +1,15 @@
 from django.contrib import admin
 from .models import Article, Category
 
+
+'''
+make model Admin :
+    using namespace message_user to send a message top of admin view
+    short_description to desribe 
+
+    add to actions name of function to run 
+'''
+
 def make_published(modeladmin, request, queryset):
     queryset.update(status='p')
     modeladmin.message_user(request,'successfuly make published')

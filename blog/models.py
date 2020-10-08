@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
 # my manager for manage filter
 class ArticleManager(models.Manager):
     def published(self):
@@ -19,13 +18,13 @@ class Category(models.Model):
     slug = models.SlugField(max_length=100 , unique=True, verbose_name="slug")
     status = models.BooleanField(default = True , verbose_name ="show?")
     position = models.IntegerField(verbose_name="position")
-
     class Meta:
         ordering = ['parent__id','position']
-
     def __str__(self):
         return self.title
     objects = CategoryManager()
+
+
 # Article
 class Article(models.Model):
     title = models.CharField(max_length = 250)
@@ -36,20 +35,16 @@ class Article(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     craeted = models.DateTimeField(auto_now_add= True)
     updated = models.DateTimeField(auto_now= True)
-
     STATUS_CHOICES =(
         ('d' , 'Draft'),
         ('p' , 'Publish')
     )
 
     status = models.CharField(max_length = 1 , choices =STATUS_CHOICES )
-
     def __str__(self):
         return self.title
-
     def category_published(self):
         return self.category.filter(status=True)
-
     objects = ArticleManager()
   
 
